@@ -1,5 +1,23 @@
 import arcade 
 
-class Mainwindow(Arcade.Window):
+ALTURA = 600
+LARGURA = 800
+TITULO = "GAME"
+
+class Mainwindow(arcade.Window):
     def __init__(self):
-        super().__init__(600,800,"Game")
+        super().__init__(LARGURA, ALTURA,TITULO)
+        arcade.set_background_color((46, 147, 255))
+    def on_draw(self):
+        arcade.start_render()
+
+    
+    def on_update(self, delta_time):
+        pass
+
+def executar():
+    jogo = Mainwindow()
+    arcade.run()
+
+if __name__ == "__main__":
+    executar()
