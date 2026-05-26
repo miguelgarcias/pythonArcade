@@ -16,7 +16,9 @@ class Mainwindow(arcade.Window):
         super().__init__(LARGURA, ALTURA,TITULO)
         arcade.set_background_color((46, 147, 255))
     def on_draw(self):
-        arcade.start_render()
+        self.clear()
+        arcade.draw_sprite(self.personagem)
+
 
     
     def on_update(self, delta_time):
