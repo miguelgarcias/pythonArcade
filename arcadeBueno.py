@@ -4,6 +4,13 @@ ALTURA = 600
 LARGURA = 800
 TITULO = "GAME"
 
+class Player(arcade.Sprite):
+    def __init___(self):
+        super().__init__("personagem.png",scale=1)
+        self.texture_direita
+    def update(self, delta_time):
+        pass    
+
 class Mainwindow(arcade.Window):
     def __init__(self):
         super().__init__(LARGURA, ALTURA,TITULO)
