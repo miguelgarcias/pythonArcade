@@ -17,5 +17,5 @@ print("Registrando...")
 comando2 = "git commit -m" + mensagem
 os.system(comando2)
 
-comando3 = "git push"
+comando3 = "git push origin Arcadegarcia"
 os.system(comando3)
