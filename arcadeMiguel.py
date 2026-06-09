@@ -1,4 +1,5 @@
-import arcade 
+import arcade
+import random
 
 ALTURA = 600
 LARGURA = 800
@@ -69,8 +70,23 @@ class Mainwindow(arcade.Window):
         self.moeda.center_y = 500
         self.moeda.change_x = self.velocidade
         self.moeda.change_y = self.velocidade
+
+        self.moeda2 = Moeda()
+        self.moeda2.left = 0
+        self.moeda2.bottom = 300
+
         self.sprite_moedas = arcade.SpriteList()
         self.sprite_moedas.append(self.moeda)
+        self.sprite_moedas.append(self.moeda2)
+
+        for i in range(25):
+            self.moeda_simples = Moeda()
+
+            self.moeda_simples.center_x = random.randint(50, LARGURA-50)
+            self.moeda_simples.center_y = random.randint(50, ALTURA-50)
+
+            self.sprite_moedas.append(self.moeda_simples)
+      
 
     def on_draw(self):
         self.clear()
